@@ -1,3 +1,5 @@
+--End Product of Cross Join
+
 -- create a table
 CREATE TABLE A (
   id INTEGER PRIMARY KEY,
