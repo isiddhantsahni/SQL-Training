@@ -1,0 +1,24 @@
+-- create a table
+CREATE TABLE A (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  gender TEXT NOT NULL
+);
+
+CREATE TABLE B (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  gender TEXT NOT NULL
+);
+-- insert some values
+INSERT INTO A VALUES (1, 'Ryan', 'M');
+INSERT INTO A VALUES (2, 'Drew', 'M');
+INSERT INTO A VALUES (3, 'Asmond', 'M');
+INSERT INTO B VALUES (2, 'Joanna', 'F');
+INSERT INTO B VALUES (4, 'James', 'F');
+-- fetch some values
+
+SELECT * 
+FROM A 
+INNER JOIN B
+WHERE A.ID = B.ID;
