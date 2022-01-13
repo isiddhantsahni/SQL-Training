@@ -1,0 +1,25 @@
+-- Employee with highest salary in each departments
+
+-- create a table
+CREATE TABLE emp (
+  id INTEGER PRIMARY KEY,
+  dept TEXT NOT NULL,
+  salary INTEGER NOT NULL
+);
+-- insert some values
+INSERT INTO emp VALUES (40, 'IT', 345607);
+INSERT INTO emp VALUES (932, 'IT', 12222);
+INSERT INTO emp VALUES (23, 'IT', 99999999);
+INSERT INTO emp VALUES (122, 'HR', 87877878);
+INSERT INTO emp VALUES (56, 'HR', 1222);
+INSERT INTO emp VALUES (3421, 'HR', 9445134);
+INSERT INTO emp VALUES (56988, 'HR', 1222);
+INSERT INTO emp VALUES (7193, 'Fin', 56868);
+INSERT INTO emp VALUES (76543, 'Transport', 75842269);
+INSERT INTO emp VALUES (9922, 'Transport', 78212);
+INSERT INTO emp VALUES (11305, 'Transport', 7777777777);
+
+-- fetch some values
+SELECT * FROM emp
+GROUP BY (dept)
+HAVING MAX(salary)
